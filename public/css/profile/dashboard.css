@@ -1,0 +1,131 @@
+.profile-shell {
+  padding: 2rem 1rem 4rem;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eef0f3;
+}
+
+.profile-card__header h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.profile-card__avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #f6f8ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+}
+
+.profile-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  font-weight: 700;
+  color: #8cb61d;
+  font-size: 1.2rem;
+}
+
+.profile-card__title {
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #6c7b00;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem;
+}
+
+.profile-grid--two {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.profile-grid__tile {
+  border-radius: 16px;
+  border: 1px solid #e6e9ef;
+  padding: 0.85rem 1rem;
+  background: #fff;
+  min-height: 110px;
+  position: relative;
+}
+
+.profile-grid__tile span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #7a861c;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.profile-grid__tile p,
+.profile-grid__tile a {
+  margin-bottom: 0;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  color: #212529;
+  word-break: break-word;
+}
+
+.profile-meta {
+  display: flex;
+  justify-content: space-between;
+  border: 1px dashed #dbe4b2;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: #4d4d4d;
+}
+
+.profile-meta span {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #6c7b00;
+}
+
+.profile-meta strong {
+  color: #000;
+}
+
+.table tbody td {
+  vertical-align: middle;
+}
+
+.table thead th {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6c6c6c;
+}
+
+.profile-requests li {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0.5rem 0;
+}
+
+.profile-requests li:last-child {
+  border-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .profile-shell {
+    padding: 1.5rem 0.5rem 3rem;
+  }
+}
