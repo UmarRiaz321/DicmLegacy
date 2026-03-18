@@ -131,6 +131,7 @@ $(document).ready(function () {
     
                     $("#spoRef").text(data.spo_ref);
                     $("#spoStatus").text(statusMapping[data.status].label);
+                    $("#buyerReference").text(data.sponsorship_breference || "N/A");
     
                     $("#charityName").text(data.charity_name); 
                     $("#charityUserName").text(data.charity_unique_id); 
@@ -154,6 +155,28 @@ $(document).ready(function () {
                     let balance = (data.required_sponsorship - data.sponsorship_offer).toFixed(2);
                     $("#totalFunding").text(`£${data.sponsorship_offer}`);
                     $("#remainingBalance").text(`£${balance}`);
+
+                    $("#pdfSpoRef").text(data.spo_ref);
+                    $("#pdfSpoStatus")
+                        .text(statusMapping[data.status].label)
+                        .removeClass("bg-primary bg-warning bg-info bg-danger bg-success text-white text-dark")
+                        .addClass(statusMapping[data.status].color);
+                    $("#pdfBuyerReference").text(data.sponsorship_breference || "N/A");
+                    $("#pdfCharityName").text(data.charity_name);
+                    $("#pdfProjectName").text(data.project_name);
+                    $("#pdfProjectPurpose").text(data.project_purpose);
+                    $("#pdfKeyObjectives").text(data.key_objectives);
+                    $("#pdfSponsorName").text(data.sponsor_name);
+                    $("#pdfRequiredSponsorship").text(`£${data.required_sponsorship}`);
+                    $("#pdfSponsorshipOffer").text(`£${data.sponsorship_offer}`);
+                    $("#pdfMonetaryValue").text(`£${data.monetary_value}`);
+                    $("#pdfMonetaryDetails").text(data.monetary_details);
+                    $("#pdfGoodsValue").text(`£${data.goods_value}`);
+                    $("#pdfGoodsDetails").text(data.goods_details);
+                    $("#pdfVolunteeringValue").text(`£${data.volunteering_value}`);
+                    $("#pdfVolunteeringDetails").text(data.volunteering_details);
+                    $("#pdfTotalFunding").text(`£${data.sponsorship_offer}`);
+                    $("#pdfRemainingBalance").text(`£${balance}`);
     
                     $("#sponsorshipDetailsModal").modal("show");
                 }

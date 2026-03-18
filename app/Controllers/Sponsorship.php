@@ -128,6 +128,7 @@ class Sponsorship extends BaseController
             'project_name' => 'required|string|max_length[500]',
             'project_purpose' => 'required|string',
             'key_objectives' => 'required|string',
+            'buyerref' => 'required|string|max_length[255]',
             'required_sponsorship' => 'required|decimal',
             'sponsorship_offer' => 'required|decimal',
             'monitory_value' => 'required|decimal',
@@ -139,6 +140,15 @@ class Sponsorship extends BaseController
 
         if (!$validation->withRequest($this->request)->run()) {
             return $this->response->setJSON(['status' => 'error', 'message' => 'Validation failed.', 'errors' => $validation->getErrors()]);
+        }
+
+        $buyerReference = trim((string) $this->request->getPost('buyerref'));
+        if ($buyerReference === '') {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Validation failed.',
+                'errors' => ['buyerref' => 'Buyer Reference is required.'],
+            ]);
         }
 
         // Prepare and validate sponsorship breakdown
@@ -183,7 +193,7 @@ class Sponsorship extends BaseController
             'volunteering_value' => $volunteering,
             'volunteering_details' => $this->request->getPost('volunteering_details'),
             'sponsorship_summary' => $this->request->getPost('sumsvp') ?? 'N/A',
-            'sponsorship_breference' => $this->request->getPost('buyerref') ?? 'N/A',
+            'sponsorship_breference' => $buyerReference,
         ];
 
         $insertedId = $this->sponsorshipModel->insertSponsorship($data);

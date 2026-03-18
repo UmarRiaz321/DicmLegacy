@@ -89,6 +89,10 @@
                           <div class="col text-start "><p><strong>SPO Status</strong></p></div>
                           <div class="col text-center"><p id="spoStatus"></p></div>
                         </div>
+                        <div class="row">
+                          <div class="col text-start "><p><strong>Buyer Reference</strong></p></div>
+                          <div class="col text-center"><p id="buyerReference"></p></div>
+                        </div>
                     </div>
                 </div>
 
@@ -265,6 +269,12 @@
                 <span id="pdfSpoStatus" class="badge fs-6 px-3 py-2"></span>
               </div>
             </div>
+            <div class="row mt-3">
+              <div class="col-md-12">
+                <p class="mb-1"><strong>Buyer Reference:</strong></p>
+                <p id="pdfBuyerReference"></p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -396,7 +406,6 @@
   </div>
 </div>
 <!-- End of Sponsorship PDF Download Modal -->
-
 
 
 

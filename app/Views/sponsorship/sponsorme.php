@@ -58,8 +58,8 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-6 form-group">
-                            <label for="buyerref" class="form-label">Buyers Reference</label>
-                            <input type="text" class="form-control" id="buyerref" name="buyerref" value="" placeholder="Please specify tender reference(insert N/A if not applicable)." />
+                            <label for="buyerref" class="form-label">Buyer Reference <small class="text-danger">*</small></label>
+                            <input type="text" class="form-control" id="buyerref" name="buyerref" value="" maxlength="255" placeholder="Please specify the buyer or tender reference." required />
                              <input type="text" class="form-control" id="SponsorshipAsk" name="required_sponsorship" value="<?= esc($required_sponsorship, 'attr') ?>" readonly hidden/>
                         </div>
                         <div class="col-6 form-group">
@@ -191,10 +191,16 @@
         $('#sponsorshipForm').on('submit', function (e) {
             e.preventDefault(); // Prevent default form submission
 
+            const buyerReference = $('#buyerref').val().trim();
             const offer = parseFloat($('#sponsorshipOffer').val()) || 0;
             const monetary = parseFloat($('#monitoryValue').val()) || 0;
             const goods = parseFloat($('#goodsValue').val()) || 0;
             const volunteering = parseFloat($('#volunteeringHours').val()) || 0;
+
+            if (buyerReference === '') {
+                showSwal('error', 'Validation Error', 'Buyer Reference is required to submit a sponsorship proposal.');
+                return;
+            }
 
             // Validate sponsorship offer breakdown before submission
             if (offer !== (monetary + goods + volunteering)) {
