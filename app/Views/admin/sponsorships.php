@@ -48,7 +48,8 @@
     <table id="sponsorshipsTable" class="table table-hover table-bordered table-striped" style="table-layout: fixed">
         <thead>
             <tr>
-                <th>Reference</th>
+                <th>SPO Reference</th>
+                <th>Buyer Reference</th>
                 <th>CSE</th>
                 <th>Business</th>
                 <th>Offer</th>
@@ -406,6 +407,4 @@
   </div>
 </div>
 <!-- End of Sponsorship PDF Download Modal -->
-
-
 

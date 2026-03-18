@@ -24,6 +24,7 @@ $(document).ready(function () {
                 response.data.forEach(function (sponsorship) {
                     const row = $('<tr>');
                     row.append($('<td>').html(escapeHtml(sponsorship.spo_ref)));
+                    row.append($('<td>').html(escapeHtml(sponsorship.sponsorship_breference || 'N/A')));
                     row.append($('<td>').html(escapeHtml(sponsorship.charity_name)));
                     row.append($('<td>').html(escapeHtml(sponsorship.sponsor_name)));
                     row.append($('<td>').html('£' + escapeHtml(sponsorship.sponsorship_offer)));

@@ -39,7 +39,7 @@ class SponsorshipModel extends Model
     public function getSponsorshipsByStatus($status)
     {
         return $this->where('status', $status)
-                    ->select('id, spo_ref, charity_name, sponsor_name, sponsorship_offer, status')
+                    ->select('id, spo_ref, sponsorship_breference, charity_name, sponsor_name, sponsorship_offer, status')
                     ->findAll();
     }
 
