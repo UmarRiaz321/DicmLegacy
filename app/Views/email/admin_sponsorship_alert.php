@@ -85,7 +85,7 @@ $adminLink   = esc($admin_link ?? base_url('admin'));
                     </tr>
                     <tr>
                         <td style="padding:16px 32px;background:#f8f9f5;text-align:center;font-size:13px;color:#6a7562;">
-                            Automated alert from the Social Impact Register.<br>
+                            This is an automated alert from the DICM.<br>
                             Please follow due diligence before approving.
                         </td>
                     </tr>

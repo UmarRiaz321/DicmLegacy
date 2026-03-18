@@ -271,7 +271,7 @@ public function passEmail(string $to, string $login, string $password): bool
         return [
             'protocol' => 'ssmtp', // If fails, change to 'sendmail'
             'mailpath' => '/usr/sbin/sendmail',
-            'charset'  => 'iso-8859-1',
+            'charset'  => 'UTF-8',
             'wordwrap' => true,
             'SMTPUser' => 'no-reply@pluggin-ecosystem.org', // Harmless with sendmail
             'SMTPPass' => '',
@@ -285,7 +285,7 @@ public function passEmail(string $to, string $login, string $password): bool
         return [
             'protocol' => 'ssmtp', // If fails, change to 'sendmail'
             'mailpath' => '/usr/sbin/sendmail',
-            'charset'  => 'iso-8859-1',
+            'charset'  => 'UTF-8',
             'wordwrap' => true,
             'SMTPUser' => 'no-reply@pluggin-ecosystem.org', // Harmless with sendmail
             'SMTPPass' => '',
