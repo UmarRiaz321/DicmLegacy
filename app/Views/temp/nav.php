@@ -37,7 +37,7 @@
               </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="https://pluggin.org/login/" target="_blank">Ecosystem</a>
+                <a class="nav-link" aria-current="page" href="https://pluggin.org/regions" target="_blank">Ecosystem</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://pluggin.org/contact/" target="_blank">Contact Us</a>
